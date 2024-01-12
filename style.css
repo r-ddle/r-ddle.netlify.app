@@ -37,6 +37,7 @@
     margin: 50px auto 0;
     background: linear-gradient(135deg var(--primary), var(--secondary));
     border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-inner{
@@ -226,4 +227,32 @@
 .github:hover::before {
   opacity: 1;
   visibility: visible;
+}
+
+.netlify-identity-signup{
+    font-size: 20px;
+}
+
+.netlify-identity-login{
+    font-size: 20px;
+}
+
+#loginpage{
+    justify-content: center;
+    display: flex;
+    margin: 50px 50px;
+    font-family: 'JetBrains Mono';
+    font-weight: bolder;
+}
+
+.modelContainer, .modelContent{
+    font-family: 'JetBrains Mono';
+}
+
+#loginpage .netlify-identity-signup{
+    margin: 50px 50px;
+}
+
+#loginpage .netlify-identity-login{
+    
 }

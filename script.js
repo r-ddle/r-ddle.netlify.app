@@ -2,7 +2,7 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 let interval = null;
 
-document.querySelector("span").onmouseenter = event => {  
+document.querySelector("h1").onmouseenter = event => {  
   let iteration = 0;
   
   clearInterval(interval);
@@ -23,6 +23,6 @@ document.querySelector("span").onmouseenter = event => {
       clearInterval(interval);
     }
     
-    iteration += 1 / 5;
+    iteration += 1 / 3;
   }, 30);
 }

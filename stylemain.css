@@ -1,13 +1,28 @@
+@media (prefers-color-scheme: light) {
+    :root {
+      --text: #081416;
+      --background: #f0f8fa;
+      --primary: #225362;
+      --secondary: #9582d3;
+      --accent: #823dae;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #e9f5f7;
+      --background: #050d0f;
+      --primary: #9ccddc;
+      --secondary: #3f2c7c;
+      --accent: #9650c1;
+    }
+  }
+
 html{
     scroll-behavior: smooth;
 }
 
 body{
-    background: hsla(0, 0%, 18%, 1);
-    background: linear-gradient(45deg, hsla(0, 0%, 18%, 1) 1%, hsla(234, 9%, 42%, 1) 59%);
-    background: -moz-linear-gradient(45deg, hsla(0, 0%, 18%, 1) 1%, hsla(234, 9%, 42%, 1) 59%);
-    background: -webkit-linear-gradient(45deg, hsla(0, 0%, 18%, 1) 1%, hsla(234, 9%, 42%, 1) 59%); 
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#2F2F2F", endColorstr="#626476", GradientType=1 );
+    background: linear-gradient(135deg, var(--primary),var(--secondary));
     font-family: 'JetBrains Mono', serif;
 }
 
