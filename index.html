@@ -4,19 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="https://i.imgur.com/JZbO2Akl.jpg" type="image/png/jpg" sizes="16x16">
     <title>Riddle's site</title>
+    <script src="https://kit.fontawesome.com/97dc4f3e88.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="hero">
-        <nav>
-            <ul>
-                <li><a href="">Latest</a></li>
-                <li><a href="">Modern</a></li>
-                <li><a href="">Contemporary</a></li>
-                <li><a href="">Affordable</a></li>
-            </ul>
-        </nav>
+    <div class="container">
+        <div class="card">
+            <div class="card-inner">
+                <div class="front">
+                    <h2>Ant Riddle</h2>
+                    <p>Newbie Programmer</p>
+                    <button>Info <i class="fa-solid fa-right-to-bracket"></i></button>
+                </div>
+                <div class="back">
+                    <img src="" alt="">
+                    <h1 data-value="Ant">Ant <span data-value="Riddle">Riddle</span></h1>
+                    <p>Currently learning <span>Python!</span> Fresh new Programmer.</p>
+                    <div class="row">
+                        <div class="col">
+                            <h2>2</h2>
+                            <p>Projects Made</p>
+                        </div>
+                        <div class="col">
+                            <h2><!             0             !></h2>
+                            <p></p>
+                        </div>
+                        <div class="col">
+                            <h2>3</h2>
+                            <p>Languages Learned</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <a href="https://github.com/tom-thy" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="main.html" class="redirect"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
+<script>
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+let interval = null;
+
+document.querySelector("span").onmouseenter = event => {  
+  let iteration = 0;
+  
+  clearInterval(interval);
+  
+  interval = setInterval(() => {
+    event.target.innerText = event.target.innerText
+      .split("")
+      .map((letter, index) => {
+        if(index < iteration) {
+          return event.target.dataset.value[index];
+        }
+      
+        return letters[Math.floor(Math.random() * 26)]
+      })
+      .join("");
+    
+    if(iteration >= event.target.dataset.value.length){ 
+      clearInterval(interval);
+    }
+    
+    iteration += 1 / 5;
+  }, 30);
+}
+</script>
 </html>
