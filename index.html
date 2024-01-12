@@ -26,7 +26,7 @@
                     <p>Currently learning <span>Python!</span> Fresh new Programmer.</p>
                     <div class="row">
                         <div class="col">
-                            <h2>2</h2>
+                            <h2 class="num">2</h2>
                             <p>Projects Made</p>
                         </div>
                         <div class="col">
@@ -34,47 +34,18 @@
                             <p></p>
                         </div>
                         <div class="col">
-                            <h2>3</h2>
+                            <h2 class="num">3</h2>
                             <p>Languages Learned</p>
                         </div>
                     </div>
                     <div class="row">
                         <a href="https://github.com/tom-thy" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="main.html" class="redirect"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="main.html" class="redirect"><i class="fa-solid fa-house"></i></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-<script>
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-let interval = null;
-
-document.querySelector("span").onmouseenter = event => {  
-  let iteration = 0;
-  
-  clearInterval(interval);
-  
-  interval = setInterval(() => {
-    event.target.innerText = event.target.innerText
-      .split("")
-      .map((letter, index) => {
-        if(index < iteration) {
-          return event.target.dataset.value[index];
-        }
-      
-        return letters[Math.floor(Math.random() * 26)]
-      })
-      .join("");
-    
-    if(iteration >= event.target.dataset.value.length){ 
-      clearInterval(interval);
-    }
-    
-    iteration += 1 / 5;
-  }, 30);
-}
-</script>
+<script src="script.js"></script>
 </html>
