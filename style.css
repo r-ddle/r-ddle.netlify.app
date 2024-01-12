@@ -164,7 +164,7 @@
 
 .row i:hover{
     transform: scale(1.3);
-    color: var(--accent);
+    color: lightblue;
 }
 
 .back button{
@@ -180,4 +180,50 @@
 }
 .card:hover .card-inner{
     transform: rotateY(-180deg);
+}
+
+.redirect::before,
+.home::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  background-color: #f0f8fa; /* Tooltip background color */
+  color: #081416; /* Tooltip text color */
+  padding: 8px;
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', system; /* Your preferred font */
+  font-size: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1;
+  bottom: 120px; /* Adjust the distance from the button */  
+}
+
+.redirect:hover::before,
+.home:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.redirect::before,
+.github::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  background-color: #f0f8fa; /* Tooltip background color */
+  color: #081416; /* Tooltip text color */
+  padding: 8px;
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', system; /* Your preferred font */
+  font-size: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1;
+  bottom: 120px; /* Adjust the distance from the button */  
+}
+
+.redirect:hover::before,
+.github:hover::before {
+  opacity: 1;
+  visibility: visible;
 }
