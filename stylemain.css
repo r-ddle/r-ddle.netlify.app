@@ -1,29 +1,32 @@
 @media (prefers-color-scheme: light) {
     :root {
-      --text: #081416;
-      --background: #f0f8fa;
-      --primary: #225362;
-      --secondary: #9582d3;
-      --accent: #823dae;
+      --text: #0d110f;
+      --background: #f1f4f2;
+      --primary: #38473e;
+      --secondary: #baa6b6;
+      --accent: #7b6260;
     }
-  }
-  @media (prefers-color-scheme: dark) {
+}
+@media (prefers-color-scheme: dark) {
     :root {
-      --text: #e9f5f7;
-      --background: #050d0f;
-      --primary: #9ccddc;
-      --secondary: #3f2c7c;
-      --accent: #9650c1;
+        --text: #edf1ef;
+        --background: #0a0d0b;
+        --primary: #b7c7bd;
+        --secondary: #584454;
+        --accent: #a08785;
     }
-  }
-
+}
+  
 html{
     scroll-behavior: smooth;
+    margin-right: -8px;
+    margin-left: -8px;
+    margin-top: -25px;
 }
 
 body{
-    background: linear-gradient(135deg, var(--primary),var(--secondary));
-    font-family: 'JetBrains Mono', serif;
+    background: var(--secondary);
+    font-family: 'JetBrains Mono';
 }
 
 #menu{
@@ -71,6 +74,11 @@ body{
     transform: translateX(0);
 }
 
+.hidden .stop{
+    opacity: 1;
+}
+
+
 section{
     display: grid;
     place-items: center;
@@ -114,4 +122,48 @@ section{
 .logos i{
     color: black;
     transition: 0.5s ease;
+}
+
+.blue{
+    background: var(--accent);
+}
+
+.custom-shape-divider-bottom-1705135813 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1705135813 svg {
+    position: relative;
+    display: block;
+    width: calc(112% + 1.3px);
+    height: 114px;
+}
+
+.custom-shape-divider-bottom-1705135813 .shape-fill {
+    fill: var(--accent);
+}
+
+.custom-shape-divider-top-1705142776 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1705142776 svg {
+    position: relative;
+    display: block;
+    width: calc(228% + 1.3px);
+    height: 179px;
+}
+
+.custom-shape-divider-top-1705142776 .shape-fill {
+    fill: var(--accent);
 }
