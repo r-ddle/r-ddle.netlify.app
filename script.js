@@ -2,7 +2,7 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 let interval = null;
 
-document.querySelector("h1").onmouseenter = event => {  
+document.querySelector("span").onmouseenter = event =>{  
   let iteration = 0;
   
   clearInterval(interval);
@@ -23,6 +23,25 @@ document.querySelector("h1").onmouseenter = event => {
       clearInterval(interval);
     }
     
-    iteration += 1 / 3;
+    iteration += 1 / 5;
   }, 30);
 }
+
+// Add an event listener to the GitHub and Home logos
+document.querySelector(".iframe").classList.remove("blur")
+
+document.querySelector(".github").addEventListener("mouseenter", () => {
+  document.querySelector(".iframe").classList.add("blur");
+});
+
+document.querySelector(".github").addEventListener("mouseleave", () => {
+  document.querySelector(".iframe").classList.remove("blur");
+});
+
+document.querySelector(".home").addEventListener("mouseenter", () => {
+  document.querySelector(".iframe").classList.add("blur");
+});
+
+document.querySelector(".home").addEventListener("mouseleave", () => {
+  document.querySelector(".iframe").classList.remove("blur");
+});
