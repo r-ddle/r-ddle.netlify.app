@@ -160,7 +160,11 @@
     font-size: 30px;
     transition: 0.5s;
     text-shadow: 0 5px 10px rgb(0, 0, 0, 0.5);
-    margin: 0px 50px;
+    margin: -5px 50px;
+}
+
+.iframe{
+    margin: 10px 0px;
 }
 
 .row i:hover{
