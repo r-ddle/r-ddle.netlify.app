@@ -61,7 +61,7 @@
   }
   
   .front {
-    background: url('https://i.imgur.com/JZbO2Akl.jpg'), url('images/favicon.jpg');
+    background: url('https://i.imgur.com/JZbO2Akl.jpg'));
     background-size: cover;
     padding: 15px 25px;
     display: flex;
@@ -170,6 +170,10 @@
     text-decoration: none;
   }
   
+  .home{
+    text-decoration: none;
+  }
+
   .iframe {
     margin: 10px 0px;
     transition: filter 1s ease;
