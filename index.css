@@ -61,8 +61,9 @@
   }
   
   .front {
-    background: url('https://i.imgur.com/JZbO2Akl.jpg');
+    background: url('https://i.imgur.com/JZbO2Akl.jpg'), url(images/favicon.jpg);
     background-size: cover;
+    background-position: center;
     padding: 15px 25px;
     display: flex;
     flex-direction: column;
