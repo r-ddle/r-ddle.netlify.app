@@ -22,7 +22,6 @@ document.querySelector("span").onmouseenter = event =>{
     if(iteration >= event.target.dataset.value.length){ 
       clearInterval(interval);
     }
-    
     iteration += 1 / 5;
   }, 30);
 }

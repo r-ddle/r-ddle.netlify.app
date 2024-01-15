@@ -26,19 +26,22 @@
   }
   
   .container {
-    width: 100%;
-    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* Horizontally center the card */
+    align-items: center; /* Vertically center the card */
+    height: 100vh; /* Set the container to take the full height of the viewport */
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     padding: 10px;
-  }
+  }  
   
   .card {
-    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%; /* Adjust the width as needed */
+    max-width: 350px; /* Set a maximum width if needed */
     height: 515px;
-    margin: 50px auto auto;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
   }
@@ -59,9 +62,10 @@
     position: absolute;
     backface-visibility: hidden;
   }
+
   
   .front {
-    background: url('https://i.imgur.com/JZbO2Akl.jpg'), url(images/favicon.jpg);
+    background: url('https://i.imgur.com/JZbO2Akl.jpg'), url('images/favicon.jpg');
     background-size: cover;
     background-position: center;
     padding: 15px 25px;
@@ -94,10 +98,9 @@
   }
   
   .back {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: black;
     padding: 20px 40px;
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
   
   .back h1 {
@@ -165,6 +168,10 @@
     font-size: 30px;
     transition: 0.5s;
     text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .icon-caption{
+    display: none;
   }
 
   .github{
@@ -256,6 +263,18 @@
   .blur {
     filter: blur(5px);
     /* Adjust the blur amount as needed */
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 768px){
+      .icon-caption{
+        display: flex;
+        margin: auto -15px;
+      }
+      .iframe{
+        height: 150px;
+        width: 110%;
+        margin: 30px -12px;
+      }
   }
 
 /* #loginpage .netlify-identity-signup{
