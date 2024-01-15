@@ -265,15 +265,15 @@
     /* Adjust the blur amount as needed */
   }
 
-  @media screen and (min-width: 320px) and (max-width: 768px){
+  @media screen and (min-width: 300px) and (max-width: 600px){
       .icon-caption{
         display: flex;
         margin: auto -15px;
       }
       .iframe{
         height: 150px;
-        width: 110%;
-        margin: 30px -12px;
+        width: 115%;
+        margin: 20px -15px auto;
       }
   }
 
