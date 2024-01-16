@@ -44,3 +44,8 @@ document.querySelector(".home").addEventListener("mouseenter", () => {
 document.querySelector(".home").addEventListener("mouseleave", () => {
   document.querySelector(".iframe").classList.remove("blur");
 });
+
+const isMobile = window.innerWidth < 768;
+
+const buttonText = isMobile ? 'Tap Me!' : 'Hover Me!';
+document.getElementById('front-button').textContent = buttonText;

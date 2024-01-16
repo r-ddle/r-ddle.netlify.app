@@ -1,286 +1,282 @@
-@media (prefers-color-scheme: light) {
-    :root {
-      --text: #081416;
-      --background: #f0f8fa;
-      --primary: #225362;
-      --secondary: #9582d3;
-      --accent: #823dae;
-    }
-  }
-  
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --text: #e9f5f7;
-      --background: #050d0f;
-      --primary: #9ccddc;
-      --secondary: #3f2c7c;
-      --accent: #9650c1;
-    }
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    font-family: 'JetBrains Mono', system;
-    box-sizing: border-box;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: center; /* Horizontally center the card */
-    align-items: center; /* Vertically center the card */
-    height: 100vh; /* Set the container to take the full height of the viewport */
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    padding: 10px;
-  }  
-  
-  .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%; /* Adjust the width as needed */
-    max-width: 350px; /* Set a maximum width if needed */
-    height: 515px;
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .card-inner {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 1s;
-  }
-  
-  .front,
-  .back {
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    position: absolute;
-    backface-visibility: hidden;
-  }
+:root {
+  --text: #D1D5DB;
+  --background: #12181B;
+  --primary: #EF4444;
+  --secondary: #3f2c7c;
+  --accent: #9650c1;
+}
 
-  
-  .front {
-    background: url('https://i.imgur.com/JZbO2Akl.jpg'), url('images/favicon.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 15px 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    color: var(--text);
-  }
-  
-  .front h2 {
-    font-weight: 500;
-    font-style: initial;
-    text-shadow: 0 10px 7px rgba(0, 0, 0, 1);
-  }
-  
-  .front p {
-    color: #ccc;
-    font-size: 13px;
-  }
-  
-  .front button {
-    width: 120px;
-    border: 1px solid var(--text);
-    background: transparent;
-    border-radius: 50px;
-    padding: 7px 20px;
-    cursor: pointer;
-    margin-top: 20px;
-    color: var(--text);
-  }
-  
-  .back {
-    color: black;
-    padding: 20px 40px;
-    transform: rotateY(-180deg);
-  }
-  
-  .back h1 {
-    font-size: 50px;
-    line-height: 55px;
-    margin-bottom: 10px;
-  }
-  
-  .back h1 span {
-    font-weight: 400;
-  }
-  
-  .back p {
-    font-size: 14px;
-  }
-  
-  .back p span {
-    font-weight: 800;
-  }
-  
-  .back img {
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .row {
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
-    justify-content: space-around;
-  }
-  
-  .col {
-    flex: 1;
-    text-align: center;
-    font-size: 12px;
-    position: relative;
-  }
-  
-  .col h2 {
-    font-size: 20px;
-  }
-  
-  .col::after {
-    content: '';
-    width: 1.5px;
-    height: 20px;
-    background: black;
-    position: absolute;
-    top: 5px;
-    right: 0;
-  }
-  
-  .col:last-child::after {
-    display: none;
-  }
-  
-  .col p {
-    margin-top: 5px;
-  }
-  
-  .row i {
-    display: flex;
-    color: black;
-    font-size: 30px;
-    transition: 0.5s;
-    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-  }
 
-  .icon-caption{
-    display: none;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'JetBrains Mono', system;
+  box-sizing: border-box;
+}
 
-  .github{
-    text-decoration: none;
-  }
+body {
+  font-family: 'JetBrains Mono';
+  /* background: url('https://e0.pxfuel.com/wallpapers/213/870/desktop-wallpaper-laptop-sherlock-in-2021-laptop-sherlock-sherlock-holmes-laptop.jpg'); */
+  background: #12181B;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(px);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 350px;
+  height: 515px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+
+.front {
+  background: url('https://i.pinimg.com/originals/d8/b3/fd/d8b3fd41f84f6b5d44774447c4082146.jpg');
+  background-size: contain;
+  background-position: center;
+  padding: 15px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: black;
+  font-size: 50px;
+}
+
+.front button {
+  width: 120px;
+  border: 1px solid black;
+  background: black;
+  border-radius: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: center;
+  padding: 5px 20px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.back {
+  color: #D1D5DB;
+  padding: 20px 40px;
+  transform: rotateY(-180deg);
+  background: inherit;
+}
+
+.back h1 {
+  font-size: 50px;
+  line-height: 55px;
+  margin-bottom: 10px;
+}
+
+.back h1 span {
+  font-weight: 400;
+}
+
+.back p {
+  font-size: 14px;
+}
+
+.back p span {
+  font-weight: 800;
+  text-shadow: 0 1px 1px #d3cccc;
   
-  .home{
-    text-decoration: none;
+}
+
+.nerd-level {
+  text-decoration: none;
+  color: #EF4444;
+  filter: none;
+  text-shadow: 0 0 0px var(--primary);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  justify-content: space-around;
+}
+
+.col {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+}
+
+.col h2 {
+  font-size: 20px;
+}
+
+.col::after {
+  content: '';
+  width: 1.5px;
+  height: 20px;
+  background: black;
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+
+.col:last-child::after {
+  display: none;
+}
+
+.col p {
+  margin-top: 5px;
+}
+
+.row i {
+  display: flex;
+  color: #EF4444;
+  font-size: 30px;
+  transition: 0.5s;
+}
+
+.row i::before{
+  text-shadow: 0 0 50px rgba(239, 68, 68, 0.8);
+}
+
+.icon-caption {
+  display: none;
+}
+
+.github {
+  text-decoration: none;
+}
+
+.home {
+  text-decoration: none;
+}
+
+.iframe {
+  margin: 10px 0px;
+  transition: filter 1s ease;
+}
+
+.row i:hover {
+  transform: scale(1.3);
+  color: #d63c3c;
+}
+
+.back button {
+  background: black;
+  color: var(--text);
+  border: 0;
+  outline: 0;
+  padding: 8px 25px;
+  border-radius: 30px;
+  font-size: 14px;
+  margin-right: 15px;
+  box-shadow: 0px 8px 10px rgba(92, 37, 116, 0.5);
+}
+
+.card:hover .card-inner {
+  transform: rotateY(-180deg);
+}
+
+.redirect::before,
+.home::before,
+.github::before,
+.nerd-level::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', system;
+  font-size: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1;
+  bottom: 170px;
+  /* Adjust the distance from the button */
+}
+
+.redirect:hover::before,
+.home:hover::before,
+.github:hover::before,
+.nerd-level:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.github::before {
+  left: 13%;
+}
+.home::before {
+  left: 50%;
+}
+.nerd-level::before{
+  bottom: 360px;
+  left: 55%;
+}
+
+.modelContainer,
+.modelContent {
+  font-family: 'JetBrains Mono';
+  text-shadow: auto 1px 5px white;
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .icon-caption {
+    display: flex;
+    margin: auto -15px;
   }
 
   .iframe {
-    margin: 10px 0px;
-    transition: filter 1s ease;
+    height: 150px;
+    width: 115%;
+    margin: 20px -15px auto;
   }
-  
-  .row i:hover {
-    transform: scale(1.3);
-    color: lightblue;
-  }
-  
-  .back button {
-    background: black;
-    color: var(--text);
-    border: 0;
-    outline: 0;
-    padding: 8px 25px;
-    border-radius: 30px;
-    font-size: 14px;
-    margin-right: 15px;
-    box-shadow: 0px 8px 10px rgba(92, 37, 116, 0.5);
-  }
-  
-  .card:hover .card-inner {
-    transform: rotateY(-180deg);
-  }
-  
-  .redirect::before,
-  .home::before,
-  .github::before {
-    content: attr(data-tooltip);
-    position: absolute;
-    background-color: #000000;
-    color: #ffffff;
-    padding: 8px;
-    border-radius: 8px;
-    font-family: 'JetBrains Mono', system;
-    font-size: 10px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-    z-index: 1;
-    bottom: 110px;
-    /* Adjust the distance from the button */
-  }
-  
-  .github::before{
-    left: 13%;
-  }
-
-  .home::before{
-    left: 50%;
-  }
-
-  .redirect:hover::before,
-  .home:hover::before,
-  .github:hover::before {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  .netlify-identity-signup,
-  .netlify-identity-login {
-    font-size: 20px;
-  }
-  
-  #loginpage {
-    justify-content: center;
-    display: flex;
-    margin: 50px 50px;
-    font-family: 'JetBrains Mono';
-    font-weight: bolder;
-  }
-  
-  .modelContainer,
-  .modelContent {
-    font-family: 'JetBrains Mono';
-  }
-  
-  .blur {
-    filter: blur(5px);
-    /* Adjust the blur amount as needed */
-  }
-
-  @media screen and (min-width: 300px) and (max-width: 600px){
-      .icon-caption{
-        display: flex;
-        margin: auto -15px;
-      }
-      .iframe{
-        height: 150px;
-        width: 115%;
-        margin: 20px -15px auto;
-      }
-  }
-
-/* #loginpage .netlify-identity-signup{
-    margin: 50px 50px;
 }
-
-#loginpage .netlify-identity-login{
-    
-} */
